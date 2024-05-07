@@ -115,7 +115,7 @@ dplyr::glimpse(nba_player_box)
 
 ```{r load_mbb_pbp_gs, warning = FALSE}
 tictoc::tic()
-  mbb_pbp <- hoopR::load_mbb_pbp(2021:hoopR::most_recent_mbb_season())
+mbb_pbp <- hoopR::load_mbb_pbp(2021:hoopR::most_recent_mbb_season())
 tictoc::toc()
 glue::glue("{nrow(mbb_pbp)} rows of men's college basketball play-by-play data from {length(unique(mbb_pbp$game_id))} games.")
 dplyr::glimpse(mbb_pbp)
