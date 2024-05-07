@@ -85,6 +85,7 @@ For the sake of your R session, we will only look at the previous 3 years of dat
 ```{r load_nba_pbp_gs, warning = FALSE}
 tictoc::tic()
 nba_pbp <- hoopR::load_nba_pbp(2021:hoopR::most_recent_nba_season())
+tictoc::toc()
 glue::glue("{nrow(nba_pbp)} rows of nba play-by-play data from {length(unique(nba_pbp$game_id))} games.")
 dplyr::glimpse(nba_pbp)
 ```
